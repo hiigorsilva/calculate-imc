@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  
+  <link rel="stylesheet" href="./src/styles/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="./src/js/app.js" type="module" defer></script>
+</head>
+
+<body>
+
+  <div class="alert-error">
+    Digite somente números
+  </div>
+  
+  <div class="container">
+    <main class="card">
+      <form class="form" action="">
+        <h1 class="title">Cálculo de IMC</h1>
+        <div class="input-wrapper">
+          <label for="weight">Peso (kg)</label>
+          <input id="weight" type="text" placeholder="60" aria-label="Digite seu peso em quilos" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="height">Altura (cm)</label>
+          <input id="height" type="text" placeholder="175" aria-label="Digite sua altura em centímetros" />
+        </div>
+
+        <button type="submit" aria-label="Calcular IMC">
+          Calcular IMC
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+        </button>
+      </form>
+    </main>  
+  </div>
+
+  <div class="modal-wrapper">
+    <div class="modal card">
+      <h2 class="title">
+        <span>Seu IMC é de 28</span>
+        <button class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </button>
+      </h2>
+      <span class="result-imc"></span>
+    </div>
+  </div>
+
+</body>
+</html>
